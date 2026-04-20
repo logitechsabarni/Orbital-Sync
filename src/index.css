@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#02040a] text-[#e2e8f0] font-mono overflow-hidden;
+  }
+}
+
+@utility glass-panel {
+  background: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 243, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@utility glass-morphism {
+  @apply glass-panel;
+}
+
+@utility neon-text {
+  text-shadow: 0 0 8px rgba(0, 243, 255, 0.6);
+}
+
+@utility neon-border {
+  border-color: rgba(0, 243, 255, 0.4);
+  box-shadow: inset 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+@utility scan-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@utility glow-emerald {
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+@utility glow-amber {
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+@utility glow-red {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
+
+@utility scroll-hide {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
